@@ -85,8 +85,10 @@ public class HttpRequestUtil {
         /*
         * 发起POST请求
         *
+        *@param url 请求的URL地址
+        * @param paramMap 请求参数
+        * @return 远程响应结果
         * */
-
         public static String doPostRequest(String url, Map<String,String> paramMap){
                 StringBuilder responseResult = new StringBuilder();
                 BufferedReader in = null;
@@ -154,7 +156,7 @@ public class HttpRequestUtil {
         }
 
         public static void main(String[] args) {
-                System.out.println(HttpRequestUtil.doGetRequest("http://www.baidu.com",null));
+                System.out.println(HttpRequestUtil.doGetRequest("http://www.baidu.com", null));
                 System.out.println(HttpRequestUtil.doPostRequest("http://www.baidu.com",null));
         }
 }
